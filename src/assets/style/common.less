@@ -1,0 +1,113 @@
+
+/**
+*Author Mona
+*date   2017-06-12
+*/
+@import 'variable.less';
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Microsoft YaHei';
+  overflow-x: hidden; 
+}
+h1,h2,h3,h4{
+  font-family: 'Microsoft YaHei';
+}
+.clearfix{
+  display: block;
+  &:before,
+  &:after{
+    display: block;
+    height: 0;
+    content: '';
+    clear: both;
+  }
+}
+
+.wallpaper-best::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: #48c1fa
+}
+
+.title-underline{
+  border-bottom:1px solid @light;
+  padding-bottom: 12px;
+  color: @color-dark;
+  a{
+    float: right;
+    color: @color-dark;
+    font-size: 12px;
+    font-weight: normal;
+  }
+}
+.btn{
+  display: inline-block;
+  padding: 3px 15px;
+  border-radius: 4px;
+  text-align: center;
+  transition: all .2s linear;
+  &:hover{
+    opacity: .8;
+    transition: all .2s linear;
+  }
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+}
+.btn-orange{
+  background-color: @orange;
+  color: @white;
+  font-size: 12px;
+}
+.btn-primary{
+  background-color: @blue;
+  color: @white;
+  font-size: 12px;
+  
+}
+.btn-default{
+  color: @color-dark;
+  background-color: @white;
+  border: 1px solid @color-light;
+  font-size: 12px;
+  &:hover{
+    background-color: #fafafa;
+  }
+}
+.text-orange{
+  color: @orange !important;
+}
+.text-orange{
+  color: @orange;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: #eee
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: #dedede
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #eee
+}
+
+a{
+  text-decoration: none;
+  background-color: transparent;
+}
+
+/*过渡效果*/
+.fade-enter-active, .fade-leave-active {
+  transition: all .1s linear;
+}
+.fade-enter, .fade-leave-active {
+  transition: all .2s linear;
+  opacity: 0;
+}
