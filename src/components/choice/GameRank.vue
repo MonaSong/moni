@@ -3,9 +3,9 @@
     <h4 class="title-underline">game rank</h4>
     <div class="game-container" @mouseleave="_leaveContainer" @mouseenter="_entercontainer">
       <div class="game-item-info clearfix" v-for="(item, $index) in list" @mouseenter="_enter" @mouseleave="_leave">
-        <div v-if="$index==0">
-          <div class="game-big clearfix" style="display:block" data-index="0">
-            <div class="rank-number text-orange">{{$index+1}}</div>
+        <div>
+          <div class="game-big clearfix" :style="{display:($index==0?'block':'none')}" data-index="0">
+            <div class="rank-number" :class="{'text-orange':($index < 3)}">{{$index+1}}</div>
             <div class="game-info">
               <div class="game-img">
                 <img :src="item.imgUrl" alt="">
@@ -19,8 +19,8 @@
               <a href="javascript:;" class="btn btn-primary">install</a>
             </div>
           </div>
-          <div class="game-sm clearfix" style="display:none" data-index="0">
-              <div class="rank-number text-orange">{{$index+1}}</div>
+          <div class="game-sm clearfix" :style="{display:($index==0?'none':'block')}" data-index="0">
+              <div class="rank-number" :class="{'text-orange':($index < 3)}">{{$index+1}}</div>
               <div class="game-info">
                 <div class="game-img">
                   <img :src="item.imgUrl" alt="">
@@ -30,68 +30,6 @@
                 </div>
                 <div class="point-num" :style="{backgroundImage: 'url(' + picZan + ')', backgroundPosition: 'left center', backgroundRepeat: 'no-repeat'}">
                   {{item.pointCount}}likies
-                </div>
-              </div>
-          </div>
-        </div>
-        <div v-else-if="$index < 3">
-          <div class="game-big clearfix" style="display:none">
-            <div class="rank-number text-orange">{{$index+1}}</div>
-            <div class="game-info">
-              <div class="game-img">
-                <img :src="item.imgUrl" alt="">
-              </div>
-              <div class="game-name-ranknum">
-                <span>{{item.title}}</span>
-                <p :style="{backgroundImage: 'url(' + picZan + ')', backgroundPosition: 'left center', backgroundRepeat: 'no-repeat'}">{{item.pointCount}}likes</p>
-              </div>
-            </div>
-            <div class="game-install">
-              <a href="javascript:;" class="btn btn-primary">install</a>
-            </div>
-          </div>
-          <div class="game-sm clearfix" style="display:block">
-              <div class="rank-number text-orange">{{$index+1}}</div>
-              <div class="game-info">
-                <div class="game-img">
-                  <img :src="item.imgUrl" alt="">
-                </div>
-                <div class="game-name-ranknum">
-                  <span>{{item.title}}</span>
-                </div>
-                <div class="point-num" :style="{backgroundImage: 'url(' + picZan + ')', backgroundPosition: 'left center', backgroundRepeat: 'no-repeat'}">
-                  {{item.pointCount}}likes
-                </div>
-              </div>
-          </div>
-        </div>
-        <div v-else>
-          <div class="game-big clearfix" style="display:none">
-            <div class="rank-number">{{$index+1}}</div>
-            <div class="game-info">
-              <div class="game-img">
-                <img :src="item.imgUrl" alt="">
-              </div>
-              <div class="game-name-ranknum">
-                <span>{{item.title}}</span>
-                <p :style="{backgroundImage: 'url(' + picZan + ')', backgroundPosition: 'left center', backgroundRepeat: 'no-repeat'}">{{item.pointCount}}likes</p>
-              </div>
-            </div>
-            <div class="game-install">
-              <a href="javascript:;" class="btn btn-primary">install</a>
-            </div>
-          </div>
-          <div class="game-sm clearfix" style="display:block">
-              <div class="rank-number">{{$index+1}}</div>
-              <div class="game-info">
-                <div class="game-img">
-                  <img :src="item.imgUrl" alt="">
-                </div>
-                <div class="game-name-ranknum">
-                  <span>{{item.title}}</span>
-                </div>
-                <div class="point-num" :style="{backgroundImage: 'url(' + picZan + ')', backgroundPosition: 'left center', backgroundRepeat: 'no-repeat'}">
-                  {{item.pointCount}}likes
                 </div>
               </div>
           </div>
