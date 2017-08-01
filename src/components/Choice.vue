@@ -8,6 +8,14 @@
     <div class="right" :style="{backgroundImage: 'url(' + exchangeBg + ')', backgroundPosition: 'left 0', backgroundRepeat: 'no-repeat', backgroundColor: '#fcfcfc'}">
       <exchange></exchange>
       <game-rank></game-rank>
+      
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <mona></mona>
     </div>
   </div>
 </template>
@@ -18,6 +26,7 @@ import PopularHot from './choice/PopularHot.vue'
 import Packs from './choice/Packs.vue'
 import Exchange from './choice/Exchange.vue'
 import GameRank from './choice/GameRank.vue'
+import Mona from './choice/Mona.vue'
 export default {
   name: 'choice',
   data () {
@@ -31,35 +40,36 @@ export default {
     PopularHot,
     Packs,
     Exchange,
-    GameRank
+    GameRank,
+    Mona
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.choice{
-  margin: 0;
-  padding: 0;
-}
-h1, h2 {
-  font-weight: normal;
-}
+  .choice{
+    margin: 0;
+    padding: 0;
+  }
+  h1, h2 {
+    font-weight: normal;
+  }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
 
-a {
-  color: #42b983;
-}
- @import '../assets/style/variable.less';
+  a {
+    color: #42b983;
+  }
+  @import '../assets/style/variable.less';
   .left{
     position: relative;
     width:770px;
